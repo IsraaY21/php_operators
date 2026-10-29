@@ -31,6 +31,8 @@ export default function ContactForm() {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />
+      <p>{message.length} / 200</p>
+      {message.length > 200 && <p>Message is over 200 characters</p>}
       <button type="submit">Send</button>
       <p>{response}</p>
     </form>
